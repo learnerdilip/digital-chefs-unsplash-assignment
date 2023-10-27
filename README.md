@@ -5,6 +5,9 @@ This template provides a minimal setup to get React working in Vite with HMR and
 ## To run the application
 
 `npm install`
+
 `npm run dev`
 
 ### Points to note:
+- Using tailwind for styling
+- to make this work on localhost need to add VITE_CLIENT_ID=YOUR_CLIENT_ID to .env file
