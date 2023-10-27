@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 import "./App.css";
 import Search from "./components/Search";
@@ -13,7 +13,11 @@ function App() {
 
   useEffect(() => {
     fetchImages(search)
-      .then((data) => setImageList(data))
+      .then((data) => {
+        if (data) {
+          setImageList(data);
+        }
+      })
       .catch((e) => console.error(e));
   }, [search]);
 
